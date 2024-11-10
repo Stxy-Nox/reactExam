@@ -16,7 +16,7 @@ export const getMovies = () => {
 
 export const getTrendings = () => {
   return fetch(
-    `https://api.themoviedb.org/3/trending/movie/day?api_key=${process.env.REACT_APP_TMDB_KEY}$language=en-US`
+    `https://api.themoviedb.org/3/trending/movie/day?api_key=${process.env.REACT_APP_TMDB_KEY}&language=en-US`
   ).then((response) => {
     if (!response.ok) {
       return response.json().then((error) => {

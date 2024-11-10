@@ -19,7 +19,7 @@ const TrendingPage = (props) => {
 
     const movies = data.results;
 
-    const favorites = movies.fillter(m => m.favorite)
+    const favorites = movies.filter(m => m.favorite)
     localStorage.setItem('favorites', JSON.stringify(favorites))
 
     return(
